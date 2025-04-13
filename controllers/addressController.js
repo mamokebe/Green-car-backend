@@ -3,7 +3,7 @@ import Address from "../models/address.js";
 //Add Address 
 export const addAddress = async (req, res) => {
   try {
-    const {userId} = req.body;
+    const userId = req.user?.id;
     //validation for no user
     if(!userId){
       return res.status(404).json({ success: false, message: "Please login first" })

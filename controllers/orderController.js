@@ -8,8 +8,8 @@ import User from "../models/user.js";
 //Place order Stripe
 export const placeOrderStripe = async (req, res) => {
   try {
-    // const userId = req.user?.id;
-    const { items, address,userId} = req.body;
+    const userId = req.user?.id;
+    const { items, address} = req.body;
     const {origin}=req.headers;
     if (!address || items.length===0 ) {
       return res.status(400).json({ success: false, message: "Please fill all the fields" });
