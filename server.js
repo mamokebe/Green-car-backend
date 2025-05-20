@@ -23,7 +23,7 @@ const port = process.env.PORT || 5000;
 // Allowed origins for CORS
 
 // Update this array with your frontend URLs deployed
-const allowedOrigins = ['http://localhost:5173', 'https://green-cart-frontend.vercel.app'];
+const allowedOrigins = ['http://localhost:5173', 'https://green-cart-frontend.vercel.app','http://44.203.96.215:3000'];
 
 app.post("/stripe", express.raw({type:"application/json"}), stripeWebhook)
 
