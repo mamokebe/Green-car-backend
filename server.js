@@ -17,8 +17,8 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Database connection
-await connectDB();
-await connectCloudinary(); // Assuming you have a function to connect to Cloudinary
+// await connectDB();
+// await connectCloudinary(); // Assuming you have a function to connect to Cloudinary
 
 // Allowed origins for CORS
 
