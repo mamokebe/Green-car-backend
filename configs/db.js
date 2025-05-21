@@ -5,10 +5,7 @@ const connectDB = async () => {
   try {
     mongoose.connection.on("connected", () => 
       console.log("MongoDB connected successfully"));
-     await mongoose.connect(`${process.env.MONGO_URI}/greencart?retryWrites=true&w=majority`,{
-       useNewUrlParser: true,
-       useUnifiedTopology: true
-     })
+     await mongoose.connect(`${process.env.MONGO_URI}/greencart?retryWrites=true&w=majority`)
   } catch (error) {
     console.error(error.message);
     process.exit(1);
