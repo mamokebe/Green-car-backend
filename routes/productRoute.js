@@ -6,10 +6,10 @@ import { upload } from '../configs/multer.js'; // Assuming you have a multer con
 
 const productRouter = express.Router();
 
-productRouter.post('/add', upload.array(["images"]),authAdmin, addProduct); // Create a new product
+productRouter.post('/add', upload.array(["images"]), addProduct); // Create a new product
 productRouter.get('/list', getProducts); // Get all products
 productRouter.get('/id', getProductById); // Get a product by ID
-productRouter.post('/stock', authAdmin, changeProductStatus); // Update a product by ID
+productRouter.post('/stock',  changeProductStatus); // Update a product by ID
 productRouter.delete('/id', authAdmin, deleteProduct); // Delete a product by ID
 
 export default productRouter;
