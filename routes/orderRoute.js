@@ -6,13 +6,13 @@ import authAdmin from '../middlewares/authAdmin.js';
 const orderRouter = express.Router();
 
 // Create Order
-orderRouter.post('/cod', authUser, placeOrderCOD); // Create a new order
+orderRouter.post('/cod',  placeOrderCOD); // Create a new order
 // Get Order by user
-orderRouter.get('/user', authUser, getUserOrders); // Get order by ID
+orderRouter.get('/user',  getUserOrders); // Get order by ID
 // Get All Orders
-orderRouter.get('/admin', authAdmin, getAllOrders); // Get all orders for admin
+orderRouter.get('/admin',  getAllOrders); // Get all orders for admin
 
-orderRouter.post("/stripe", authUser, placeOrderStripe) // Create order with stripe
+orderRouter.post("/stripe",  placeOrderStripe) // Create order with stripe
 
 
 export default orderRouter;
